@@ -1,6 +1,6 @@
 <template>
 <p>Compteur : {{ count }}</p>
-<button>Incrémenter</button>
+<button v-on:click="increment">Incrémenter</button>
 </template>
 
 <script setup>
