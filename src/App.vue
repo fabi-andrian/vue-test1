@@ -1,17 +1,12 @@
 <template>
-  <h1>Hi {{ firstName.toUpperCase() }} !</h1>
-  <p>You are the GOAT.</p>
+<p>Compteur : {{ count }}</p>
 </template>
 
 <script setup>
-  const firstName = "Leo";
-</script>
+import {ref} from 'vue'
 
-<style>
-h1 {
-  color: pink;
-}
-p {
-  font-size: 4ch;
-}
-</style>
+const count = ref(0)
+setInterval(() => {
+  count.value++
+}, 1000);
+</script>
