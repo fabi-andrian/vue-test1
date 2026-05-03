@@ -1,5 +1,5 @@
 <template>
-<p :style="{color: count > 5 ? 'red' : 'green'}">Compteur : {{ count }}</p>
+<p :class="{active: count > 5}">Compteur : {{ count }}</p>
 <button @click="increment">Incrémenter</button>
 <button @click="decrement">Décrémenter</button>
 </template>
@@ -17,3 +17,9 @@ const decrement = () => {
   count.value--
 }
 </script>
+
+<style>
+.active {
+  color: red;
+}
+</style>
