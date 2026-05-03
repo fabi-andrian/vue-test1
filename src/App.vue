@@ -4,7 +4,7 @@
 <button @click="decrement">Décrémenter</button>
 <ul>
   <li v-for="movie in movies">
-    {{ movie }}
+    {{ movie }} <button @click="deleteMovie(movie)">Supprimer</button>
   </li>
 </ul>
 </template>
@@ -24,6 +24,9 @@ const increment = (event) => {
 }
 const decrement = () => {
   count.value--
+}
+const deleteMovie = (movie) => {
+  movies.value = movies.value.filter( m => m != movie)
 }
 </script>
 
