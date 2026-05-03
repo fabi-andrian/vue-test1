@@ -1,5 +1,5 @@
 <template>
-<p>Compteur : {{ count }} <div v-html="firstName"></div></p>
+<p>Compteur : {{ count }}</p>
 <button @click="increment">Incrémenter</button>
 <button @click="decrement">Décrémenter</button>
 </template>
@@ -8,7 +8,6 @@
 import {ref} from 'vue'
 
 const count = ref(0)
-const firstName = '<span>Demo</span>'
 const increment = (event) => {
   console.log(event)
   count.value++
